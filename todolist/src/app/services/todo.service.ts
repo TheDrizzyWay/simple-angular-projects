@@ -23,7 +23,11 @@ export class TodoService {
       return this.http.get<Todo[]>(`${this.apiUrl}${this.todosLimit}`);
   }
 
-  deleteTodo(todo):Observable<Todo> {
+  addTodo(todo:Todo):Observable<Todo> {
+    return this.http.post<Todo>(this.apiUrl, todo, httpOptions);
+  }
+
+  deleteTodo(todo:Todo):Observable<Todo> {
     const url = `${this.apiUrl}/${todo.id}`;
     return this.http.delete<Todo>(url, httpOptions);
   }
