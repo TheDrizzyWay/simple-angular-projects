@@ -1,3 +1,22 @@
-<p>
-  customer-list works!
-</p>
+<div class="mat-elevation-z8">
+  <mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
+  <mat-table [style.display]="loading === false ? 'block' : 'none'" #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> CustomerId </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{ customer.id }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="job">
+      <mat-header-cell *matHeaderCellDef> Job </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.job}} </mat-cell>
+    </ng-container>
+  </mat-table>
+</div>
