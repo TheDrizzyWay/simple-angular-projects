@@ -19,7 +19,7 @@
       <mat-cell *matCellDef="let element"> {{element.job}} </mat-cell>
     </ng-container>
 
-    <ng-container  matColumnDef="operations">
+    <ng-container matColumnDef="operations">
       <mat-header-cell *matHeaderCellDef> Operations </mat-header-cell>
       <mat-cell *matCellDef="let element">
         <button  mat-button  color="primary" (click)="deleteCustomer(element.id)">

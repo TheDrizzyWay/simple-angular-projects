@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import {
-  MatNativeDateModule,MatSnackBarModule,MatIconModule,
+  MatNativeDateModule, MatSnackBarModule, MatIconModule,
   MatDialogModule, MatButtonModule, MatTableModule,
-  MatPaginatorModule , MatSortModule,MatTabsModule,
-  MatCheckboxModule, MatToolbarModule, MatCard,
-  MatCardModule, MatFormField, MatFormFieldModule,
+  MatPaginatorModule, MatSortModule, MatTabsModule,
+  MatCheckboxModule, MatToolbarModule,
+  MatCardModule, MatFormFieldModule,
   MatProgressSpinnerModule, MatInputModule
 } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -25,12 +25,12 @@ imports: [
   MatPaginatorModule
 ],
 exports: [
-  MatTabsModule,MatDividerModule,MatSliderModule,
-  MatSelectModule,MatRadioModule,MatNativeDateModule,
-  MatDatepickerModule,MatSnackBarModule,MatIconModule,
-  MatDialogModule,MatProgressSpinnerModule,MatButtonModule,
+  MatTabsModule, MatDividerModule, MatSliderModule,
+  MatSelectModule, MatRadioModule, MatNativeDateModule,
+  MatDatepickerModule, MatSnackBarModule, MatIconModule,
+  MatDialogModule, MatProgressSpinnerModule, MatButtonModule,
   MatSortModule, MatCheckboxModule, MatToolbarModule,
-  MatCardModule,MatTableModule,MatTabsModule,
+  MatCardModule, MatTableModule, MatTabsModule,
   MatFormFieldModule, MatProgressSpinnerModule,
   MatInputModule, MatPaginatorModule
 ]

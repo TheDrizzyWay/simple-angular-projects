@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from  '@angular/material';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
 import { ErrorComponent } from '../error.component';
 
@@ -9,8 +9,8 @@ import { ErrorComponent } from '../error.component';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public username:string
-  public password:string
+  public username: string;
+  public password: string;
   constructor(
     private dialog: MatDialog,
     private router: Router
@@ -20,13 +20,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-        if(this.username === "demo" && this.password === "demo")
-        {
+        if (this.username === 'demo' && this.password === 'demo') {
             this.router.navigate(['customer-list']);
-        }
-        else {
+        } else {
             this.dialog.open(ErrorComponent, {
-            data: { message:  "Your login information is incorrect!" }
+            data: { message:  'Your login information is incorrect!' }
           });
         }
     }
